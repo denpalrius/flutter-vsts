@@ -1,0 +1,18 @@
+{
+  "name": "Flutter",
+  "version": "0.1.0",
+  "description": "Flutter VSTS extension",
+  "keywords": [
+    "Flutter",
+    "VSTS",
+    "Android",
+    "ios"
+  ],
+  "author": "Dennis Riungu",
+  "license": "MIT",
+  "devDependencies": {},
+  "scripts": {},
+  "dependencies": {
+    "vss-web-extension-sdk": "^5.131.0"
+  }
+}

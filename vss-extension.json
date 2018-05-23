@@ -1,0 +1,47 @@
+{
+    "manifestVersion": 1,
+    "id": "flutter-vsts",
+    "publisher": "Dennis Riungu",
+    "version": "1.0.0",
+    "name": "Flutter-VSTS",
+    "friendlyName": "Flutter VSTS Extension",
+    "description": "A Flutter Visual Studio Services extension to test and build android and ios applications built using Flutter",
+    "public": false,
+    "helpMarkDown": "[More information](https://github.com/denpalrius/FlutterVSTS/README.md)",
+    "runsOn": ["Agent"],
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "inputs": [
+        {
+            "name": "flutterCommand",
+            "type": "string",
+            "label": "Flutter Command",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": " ex: The Flutter command to run. Either 'run' or 'build', resulting to 'flutter test' and 'flutter build' respectively"
+        },
+        {
+            "name": "build-configuration",
+            "type": "string",
+            "label": "Build Configuration",
+            "defaultValue": "release",
+            "required": true,
+            "helpMarkDown": "Build configuration to use. either debug or release, resulting to '--debug' and '--release' respectively"
+        },
+        {
+            "name": "Clean",
+            "type": "boolean",
+            "label": "Clean",
+            "defaultValue": "false",
+            "required": false,
+            "helpMarkDown": "If this is true, will remove previously downloaded flutter runtimes and use clone command to download Flutter afresh. Otherwise, it will use the exisiting Flutter runtimes."
+        }
+    ],
+    "execution": {
+        "Powershell": {
+            "target": "FlutterVSTS.ps1"
+        }
+    }
+}
