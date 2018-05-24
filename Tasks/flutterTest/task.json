@@ -5,7 +5,7 @@
     "friendlyName": "Flutter Test",
     "category": "Test",
     "description": "Run Unit Tests using Google's FLutter SDK",
-    "helpMarkDown": "[More information](https://github.com/denpalrius/FlutterVSTS/README.md)",
+    "helpMarkDown": "[More information](https://marketplace.visualstudio.com/items?itemName=dennis-riungu.flutter-vsts)",
     "runsOn": ["Agent"],
     "instanceNameFormat": "Test $('Flutter')",
     "version": {
@@ -51,22 +51,6 @@
             "defaultValue": "",
             "required": false,
             "helpMarkDown": "Additional arguments to use during the Flutter build process. For example, -v, etc. Keep in mind that these arguments will be appended to the 'Flutter build' command"
-        },
-        {
-            "name": "runDebug",
-            "type": "boolean",
-            "label": "Run as debug",
-            "defaultValue": "false",
-            "required": false,
-            "helpMarkDown": "Use the debug build configuration, resulting to '--debug'. The default build configuration is 'release'"
-        },
-        {   
-            "name": "runTests",
-            "type": "boolean",
-            "label": "Run Tests",
-            "defaultValue": "false",
-            "required": false,
-            "helpMarkDown": "If this is true, 'Flutter test' will be done before the build."
         },
         {   
             "name": "Clean",

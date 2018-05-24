@@ -5,9 +5,8 @@
     "friendlyName": "Flutter Build - iOS",
     "category": "Build",
     "description": "Build iOS app using Google's Flutter SDK",
-    "helpMarkDown": "[More information](https://github.com/denpalrius/FlutterVSTS/iOS/README.md)",
+    "helpMarkDown": "[More information](https://marketplace.visualstudio.com/items?itemName=dennis-riungu.flutter-vsts)",
     "runsOn": ["Agent"],
-    "instanceNameFormat": "Build $('FlutteriOS')",
     "version": {
         "Major": 0,
         "Minor": 1,
@@ -59,14 +58,6 @@
             "defaultValue": "false",
             "required": false,
             "helpMarkDown": "Use the debug build configuration, resulting to '--debug'. The default build configuration is 'release'"
-        },
-        {   
-            "name": "runTests",
-            "type": "boolean",
-            "label": "Run Tests",
-            "defaultValue": "false",
-            "required": false,
-            "helpMarkDown": "If this is true, 'Flutter test' will be done before the build."
         },
         {   
             "name": "Clean",

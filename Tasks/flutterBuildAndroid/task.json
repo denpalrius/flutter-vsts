@@ -1,11 +1,11 @@
 {
     "id": "ded25ea8-6c39-468d-b94a-20fe54de1c02",
     "author": "Dennis Riungu",
-    "name": "FlutterBuildApk",
+    "name": "FlutterBuildAndroid",
     "friendlyName": "Flutter Build - Android",
     "category": "Build",
     "description": "Build Android apk using Google's Flutter SDK",
-    "helpMarkDown": "[More information](https://github.com/denpalrius/FlutterVSTS/README.md)",
+    "helpMarkDown": "[More information](https://marketplace.visualstudio.com/items?itemName=dennis-riungu.flutter-vsts)",
     "runsOn": ["Agent"],
     "version": {
         "Major": 0,
@@ -58,14 +58,6 @@
             "defaultValue": "false",
             "required": false,
             "helpMarkDown": "Use the debug build configuration, resulting to '--debug'. The default build configuration is 'release'"
-        },
-        {   
-            "name": "runTests",
-            "type": "boolean",
-            "label": "Run Tests",
-            "defaultValue": "false",
-            "required": false,
-            "helpMarkDown": "If this is true, 'Flutter test' will be done before the build."
         },
         {   
             "name": "Clean",
