@@ -1,36 +1,40 @@
 {
     "manifestVersion": 1,
-    "id": "flutter-vsts",
+    "id": "flutter",
     "publisher": "dennis-riungu",
-    "version": "1.0.4",
-    "name": "Flutter-VSTS",
-    "description": "A Visual Studio Services extension to test and build android and ios applications built using Google's Flutter",
+    "version": "1.0.9",
+    "name": "Flutter Test & Build",
+    "description": "Test and build Android and iOS applications using Google's Flutter mobile SDK in VSTS/TFS",
     "public": false,
     "targets": [{
         "id": "Microsoft.VisualStudio.Services"
     }],
     "categories": [
         "Build and release"
-    ],   
-
+    ],
     "tags": [
-        "build",
-        "test",
-        "flutter",
-        "android",
+        "Flutter",
+        "Build",
+        "Test",
+        "Android",
         "apk",
-        "ios"
+        "Apple",
+        "iPhone",
+        "iPad",
+        "ios",
+        "ipa",
+        "Continuous Integration"
     ],
     "icons": {
-        "default": "assets/flutter-logo.png"
+        "default": "images/flutter-logo.png"
     },
     "branding": {
-        "color": "rgb(0, 145, 234)",
-        "theme": "dark"
+        "color": "#E5E5E5",
+        "theme": "light"
     },
     "content": {
         "details": {
-            "path": "README.md"
+            "path": "README.MD"
         },
         "license": {
             "path": "LICENSE"
@@ -38,26 +42,51 @@
     },
     "files": [
         {
-            "path": "tasks"
+            "path": "Tasks/flutterBuildAndroid"
+        },
+        {
+            "path": "Tasks/flutterBuildiOS"
+        },
+        {
+            "path": "Tasks/flutterTest"
+        },
+        {
+            "path": "images", "addressable": true
         }
     ],
     "scopes": [
         "vso.code_write",
         "vso.test_write"
     ],
-    "demands": [
-        "java",
-        "AndroidSDK",
-        "JDK"
-    ],
-    "contributions": [{
-        "id": "flutter-vsts-contrib",
+    "contributions": [
+        {
+            "id": "flutter-build-android",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/flutterBuildAndroid"
+            }
+        },
+        {
+            "id": "flutter-build-ios",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/flutterBuildiOS"
+            }
+        },
+        {        
+        "id": "flutter-test",
         "type": "ms.vss-distributed-task.task",
         "targets": [
             "ms.vss-distributed-task.tasks"
         ],
         "properties": {
-            "name": "tasks"
+            "name": "Tasks/flutterTest"
         }
     }],
     "links": {

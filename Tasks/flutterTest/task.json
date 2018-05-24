@@ -1,12 +1,13 @@
 {
     "id": "75f36435-df85-4b9f-8a86-24dddd4467a7",
     "author": "Dennis Riungu",
-    "name": "Flutter VSTS",
-    "friendlyName": "Flutter VSTS",
-    "category": "Utility",
-    "description": "A Flutter Visual Studio Services extension to test and build android and ios applications built using Flutter",
+    "name": "FlutterTest",
+    "friendlyName": "Flutter Test",
+    "category": "Test",
+    "description": "Run Unit Tests using Google's FLutter SDK",
     "helpMarkDown": "[More information](https://github.com/denpalrius/FlutterVSTS/README.md)",
     "runsOn": ["Agent"],
+    "instanceNameFormat": "Test $('Flutter')",
     "version": {
         "Major": 0,
         "Minor": 1,
@@ -16,7 +17,9 @@
         "Build",
         "Release"
     ],
-    "instanceNameFormat": "Echo $('Build flutter')",
+    "demands": [
+        "npm"
+    ],
     "groups": [
         {
             "name": "advanced",
@@ -75,8 +78,9 @@
         }
     ],
     "execution": {
-        "Powershell": {
-            "target": "flutter-build.ps1"
+        "Node": {
+            "target": "FlutterTest.js",
+            "argumentFormat": ""
         }
     }
 }

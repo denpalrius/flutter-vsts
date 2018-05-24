@@ -1,5 +1,5 @@
 {
-  "name": "flutter-vsts",
+  "name": "flutter-vsts-extension",
   "version": "0.1.0",
   "description": "Flutter VSTS extension",
   "keywords": [
@@ -12,13 +12,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/denpalrius/flutter-vsts.git"
+    "url": "https://github.com/denpalrius/flutter-vsts-extension.git"
   },
   "devDependencies": {},
   "scripts": {
     "create": "tfx extension create",
     "package": "tfx extension create --manifest-globs vss-extension.json --rev-version",
-    "publish":"tfx extension publish --manifest-globs your-manifest.json --rev-version"
+    "publish": "tfx extension publish --manifest-globs vss-extension.json --rev-version"
   },
   "dependencies": {
     "vss-web-extension-sdk": "^5.131.0"
