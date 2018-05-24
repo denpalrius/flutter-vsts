@@ -1,15 +1,28 @@
 {
-    "id": "flutter-build",
+    "id": "75f36435-df85-4b9f-8a86-24dddd4467a7",
     "author": "Dennis Riungu",
-    "version": "1.0.0",
     "name": "Flutter VSTS",
     "friendlyName": "Flutter VSTS",
+    "category": "Utility",
     "description": "A Flutter Visual Studio Services extension to test and build android and ios applications built using Flutter",
     "helpMarkDown": "[More information](https://github.com/denpalrius/FlutterVSTS/README.md)",
     "runsOn": ["Agent"],
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
     "visibility": [
         "Build",
         "Release"
+    ],
+    "instanceNameFormat": "Echo $('Build flutter')",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
     ],
     "inputs": [
         {

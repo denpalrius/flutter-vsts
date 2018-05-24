@@ -2,19 +2,17 @@
     "manifestVersion": 1,
     "id": "flutter-vsts",
     "publisher": "dennis-riungu",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "name": "Flutter-VSTS",
     "description": "A Visual Studio Services extension to test and build android and ios applications built using Google's Flutter",
     "public": false,
     "targets": [{
         "id": "Microsoft.VisualStudio.Services"
     }],
-    "galleryFlags": [
-        "Preview"
-    ],
     "categories": [
         "Build and release"
-    ],
+    ],   
+
     "tags": [
         "build",
         "test",
@@ -41,9 +39,6 @@
     "files": [
         {
             "path": "tasks"
-        },
-        {
-            "path": "assets", "addressable": true
         }
     ],
     "scopes": [
@@ -56,13 +51,13 @@
         "JDK"
     ],
     "contributions": [{
-        "id": "flutter-vsts",
+        "id": "flutter-vsts-contrib",
         "type": "ms.vss-distributed-task.task",
         "targets": [
             "ms.vss-distributed-task.tasks"
         ],
         "properties": {
-            "name": "Flutter VSTS"
+            "name": "tasks"
         }
     }],
     "links": {
