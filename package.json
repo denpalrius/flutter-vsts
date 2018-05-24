@@ -1,5 +1,5 @@
 {
-  "name": "flutter",
+  "name": "flutter-vsts",
   "version": "0.1.0",
   "description": "Flutter VSTS extension",
   "keywords": [
@@ -10,6 +10,10 @@
   ],
   "author": "Dennis Riungu",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/denpalrius/flutter-vsts.git"
+  },
   "devDependencies": {},
   "scripts": {
     "build": "tfx extension create",
