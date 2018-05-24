@@ -13,20 +13,44 @@
     ],
     "inputs": [
         {
-            "name": "flutterCommand",
+            "name": "sourceFolder ",
             "type": "string",
-            "label": "Flutter Command",
-            "defaultValue": "",
-            "required": true,
-            "helpMarkDown": " ex: The Flutter command to run. Either 'run' or 'build', resulting to 'flutter test' and 'flutter build' respectively"
+            "label": "Source Folder",
+            "defaultValue": "$(system.defaultworkingdirectory)",
+            "required": false,
+            "helpMarkDown": "The source folder that the Flutter commands will be run from. Empty is the root of the repo. Example: $(system.defaultworkingdirectory)"
         },
         {
-            "name": "build-configuration",
+            "name": "targetFolder ",
             "type": "string",
-            "label": "Build Configuration",
-            "defaultValue": "release",
-            "required": true,
-            "helpMarkDown": "Build configuration to use. either debug or release, resulting to '--debug' and '--release' respectively"
+            "label": "Target Folder",
+            "defaultValue": "$(build.artifactstagingdirectory)",
+            "required": false,
+            "helpMarkDown": "The target folder/path where build results will be published. You can use variables. Example: $(build.artifactstagingdirectory)"
+        },
+        {
+            "name": "arguments",
+            "type": "string",
+            "label": "Arguments",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Additional arguments to use during the Flutter build process. For example, -v, etc. Keep in mind that these arguments will be appended to the 'Flutter build' command"
+        },
+        {
+            "name": "runDebug",
+            "type": "boolean",
+            "label": "Run as debug",
+            "defaultValue": "false",
+            "required": false,
+            "helpMarkDown": "Use the debug build configuration, resulting to '--debug'. The default build configuration is 'release'"
+        },
+        {   
+            "name": "runTests",
+            "type": "boolean",
+            "label": "Run Tests",
+            "defaultValue": "false",
+            "required": false,
+            "helpMarkDown": "If this is true, 'Flutter test' will be done before the build."
         },
         {   
             "name": "Clean",
@@ -34,12 +58,12 @@
             "label": "Clean",
             "defaultValue": "false",
             "required": false,
-            "helpMarkDown": "If this is true, will remove previously downloaded flutter runtimes and use clone command to download Flutter afresh. Otherwise, it will use the exisiting Flutter runtimes."
+            "helpMarkDown": "If this is true, previously downloaded flutter runtimes will be removed. Otherwise, if there are exisiting Flutter runtimes they will be used."
         }
     ],
     "execution": {
         "Powershell": {
-            "target": "flutter-test.ps1"
+            "target": "flutter-build.ps1"
         }
     }
 }
