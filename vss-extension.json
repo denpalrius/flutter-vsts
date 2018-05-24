@@ -13,8 +13,7 @@
         "Preview"
     ],
     "categories": [
-        "Build and release",
-        "Test"
+        "Build and release"
     ],
     "tags": [
         "build",
@@ -25,7 +24,7 @@
         "ios"
     ],
     "icons": {
-        "default": "images/flutter-logo.png"
+        "default": "assets/flutter-logo.png"
     },
     "branding": {
         "color": "rgb(0, 145, 234)",
@@ -41,7 +40,7 @@
     },
     "files": [
         {
-            "path": "FlutterVSTS"
+            "path": "tasks"
         },
         {
             "path": "assets", "addressable": true
