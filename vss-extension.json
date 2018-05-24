@@ -1,47 +1,87 @@
 {
     "manifestVersion": 1,
     "id": "flutter-vsts",
-    "publisher": "Dennis Riungu",
+    "publisher": "dennis-riungu",
     "version": "1.0.0",
     "name": "Flutter-VSTS",
-    "friendlyName": "Flutter VSTS Extension",
-    "description": "A Flutter Visual Studio Services extension to test and build android and ios applications built using Flutter",
+    "description": "A Visual Studio Services extension to test and build android and ios applications built using Google's Flutter",
     "public": false,
-    "helpMarkDown": "[More information](https://github.com/denpalrius/FlutterVSTS/README.md)",
-    "runsOn": ["Agent"],
-    "visibility": [
-        "Build",
-        "Release"
+    "targets": [{
+        "id": "Microsoft.VisualStudio.Services"
+    }],
+    "galleryFlags": [
+        "Preview"
     ],
-    "inputs": [
+    "categories": [
+        "Build and release",
+        "Test"
+    ],
+    "tags": [
+        "build",
+        "test",
+        "flutter",
+        "android",
+        "apk",
+        "ios"
+    ],
+    "icons": {
+        "default": "images/flutter-logo.png"
+    },
+    "branding": {
+        "color": "rgb(0, 145, 234)",
+        "theme": "dark"
+    },
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "files": [
         {
-            "name": "flutterCommand",
-            "type": "string",
-            "label": "Flutter Command",
-            "defaultValue": "",
-            "required": true,
-            "helpMarkDown": " ex: The Flutter command to run. Either 'run' or 'build', resulting to 'flutter test' and 'flutter build' respectively"
+            "path": "FlutterVSTS"
         },
         {
-            "name": "build-configuration",
-            "type": "string",
-            "label": "Build Configuration",
-            "defaultValue": "release",
-            "required": true,
-            "helpMarkDown": "Build configuration to use. either debug or release, resulting to '--debug' and '--release' respectively"
-        },
-        {
-            "name": "Clean",
-            "type": "boolean",
-            "label": "Clean",
-            "defaultValue": "false",
-            "required": false,
-            "helpMarkDown": "If this is true, will remove previously downloaded flutter runtimes and use clone command to download Flutter afresh. Otherwise, it will use the exisiting Flutter runtimes."
+            "path": "assets", "addressable": true
         }
     ],
-    "execution": {
-        "Powershell": {
-            "target": "FlutterVSTS.ps1"
+    "scopes": [
+        "vso.code_write",
+        "vso.test_write"
+    ],
+    "demands": [
+        "java",
+        "AndroidSDK",
+        "JDK"
+    ],
+    "contributions": [{
+        "id": "flutter-vsts",
+        "type": "ms.vss-distributed-task.task",
+        "targets": [
+            "ms.vss-distributed-task.tasks"
+        ],
+        "properties": {
+            "name": "Flutter VSTS"
         }
+    }],
+    "links": {
+        "learn": {
+            "uri": "https://github.com/denpalrius/FlutterVSTS/blob/master/README.md"
+        },
+        "repository": {
+            "uri": "https://github.com/denpalrius/FlutterVSTS.git"
+        },
+        "license": {
+            "uri": "https://github.com/denpalrius/FlutterVSTS/LICENSE"
+        },
+        "support": {
+            "uri": "mailto: denpalrius@live.com"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/denpalrius/FlutterVSTS.git"
     }
 }
