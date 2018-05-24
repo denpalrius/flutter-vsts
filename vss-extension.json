@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "flutter-vsts",
     "publisher": "dennis-riungu",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "Flutter-VSTS",
     "description": "A Visual Studio Services extension to test and build android and ios applications built using Google's Flutter",
     "public": false,

@@ -16,8 +16,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "tfx extension create",
-    "release": "tfx extension create --manifest-globs vss-extension.json --rev-version"
+    "create": "tfx extension create",
+    "package": "tfx extension create --manifest-globs vss-extension.json --rev-version"
   },
   "dependencies": {
     "vss-web-extension-sdk": "^5.131.0"
