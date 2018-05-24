@@ -91,20 +91,23 @@
     }],
     "links": {
         "learn": {
-            "uri": "https://github.com/denpalrius/FlutterVSTS/blob/master/README.md"
+            "uri": "https://github.com/denpalrius/flutter-vsts/blob/master/README.MD"
         },
         "repository": {
-            "uri": "https://github.com/denpalrius/FlutterVSTS.git"
+            "uri": "https://github.com/denpalrius/flutter-vsts"
         },
         "license": {
-            "uri": "https://github.com/denpalrius/FlutterVSTS/LICENSE"
+            "uri": "https://github.com/denpalrius/flutter-vsts/blob/master/LICENSE"
         },
+        "issues": {
+            "uri": "https://github.com/denpalrius/flutter-vsts/issues"
+        }
         "support": {
             "uri": "mailto: denpalrius@live.com"
         }
     },
     "repository": {
         "type": "git",
-        "uri": "https://github.com/denpalrius/FlutterVSTS.git"
+        "uri": "https://github.com/denpalrius/flutter-vsts.git"
     }
 }

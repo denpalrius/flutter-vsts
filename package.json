@@ -12,13 +12,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/denpalrius/flutter-vsts-extension.git"
+    "url": "https://github.com/denpalrius/flutter-vsts.git"
   },
   "devDependencies": {},
   "scripts": {
     "create": "tfx extension create",
     "release": "tfx extension create --manifest-globs vss-extension.json --rev-version --output-path ./vsix",
-    "publish": "tfx extension publish --manifest-globs vss-extension.json --rev-version --output-path ./vsix --t $(marketPlaceToken)"
+    "publish": "tfx extension publish --manifest-globs vss-extension.json --rev-version --output-path ./vsix --token $(marketPlaceToken)"
   },
   "dependencies": {
     "vss-web-extension-sdk": "^5.131.0"
