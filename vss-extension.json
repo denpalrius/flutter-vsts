@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "flutter-vsts",
     "publisher": "dennis-riungu",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "name": "Flutter Test & Build",
     "description": "Test and build Android and iOS applications using Google's Flutter mobile SDK in VSTS/TFS",
     "public": false,

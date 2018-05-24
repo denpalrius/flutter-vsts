@@ -17,8 +17,8 @@
   "devDependencies": {},
   "scripts": {
     "create": "tfx extension create",
-    "package": "tfx extension create --manifest-globs vss-extension.json --rev-version",
-    "publish": "tfx extension publish --manifest-globs vss-extension.json --rev-version"
+    "release": "tfx extension create --manifest-globs vss-extension.json --rev-version --output-path ./vsix",
+    "publish": "tfx extension publish --manifest-globs vss-extension.json --rev-version --output-path ./vsix --t $(marketPlaceToken)"
   },
   "dependencies": {
     "vss-web-extension-sdk": "^5.131.0"
